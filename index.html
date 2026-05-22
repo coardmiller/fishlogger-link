@@ -100,7 +100,17 @@
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
     }
 
-    .template h2 {
+    .referral {
+      display: grid;
+      gap: 12px;
+      padding: 16px;
+      border: 1px solid rgba(233, 168, 74, 0.24);
+      border-radius: 18px;
+      background: rgba(233, 168, 74, 0.09);
+    }
+
+    .template h2,
+    .referral h2 {
       margin: 0 0 2px;
       font-size: 22px;
       line-height: 1.1;
@@ -147,6 +157,16 @@
       letter-spacing: 0;
       font-family: inherit;
       cursor: pointer;
+    }
+
+    .share-copy {
+      margin: 0;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(2, 18, 20, 0.28);
+      color: rgba(255, 248, 235, 0.82);
+      font-size: 15px;
+      line-height: 1.4;
     }
 
     .primary {
@@ -208,15 +228,21 @@
     </section>
     <nav class="actions" aria-label="FishLogger links">
       <a class="button primary" href="https://testflight.apple.com/join/8G7G63b6">Join the beta</a>
+    </nav>
+    <section class="referral" aria-label="Share FishLogger">
+      <h2>Already joined?</h2>
+      <p class="share-copy">Send this to one angler who actually logs what worked. We are trying to hit 50 beta installs by Tuesday.</p>
+      <button class="button subtle" id="share-button" type="button">Share with an angler</button>
+    </section>
+    <nav class="actions" aria-label="FishLogger fallback links">
       <a class="button secondary" href="https://apps.apple.com/us/app/fishlogger-fishing-journal/id6757573416?eventid=6772020592&amp;ct=weekend_event_bridge">Open the App Store event</a>
       <a class="button secondary" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6757573416&amp;code=FISHLOGGER">Use code FISHLOGGER</a>
-      <button class="button subtle" id="share-button" type="button">Share with an angler</button>
     </nav>
     <p class="note">Beta access is open while the next App Store release is in review. The App Store event runs May 22-26. Code FISHLOGGER gives new yearly Pro customers one free month through May 31.</p>
   </main>
   <script>
     const shareUrl = "https://coardmiller.github.io/fishlogger-link/?src=share";
-    const shareText = "Try FishLogger beta. It is a private fishing journal for logging catches by voice without spot burning.";
+    const shareText = "I am helping FishLogger get to 50 beta installs. It is a private fishing journal for logging catches by voice without spot burning.";
     const shareButton = document.getElementById("share-button");
 
     shareButton.addEventListener("click", async () => {
