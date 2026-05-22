@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d504b">
-  <meta name="description" content="Join the FishLogger beta: log catches by voice, keep spots private, and remember what worked next trip.">
+  <meta name="description" content="Download FishLogger on the App Store: log catches by voice, keep spots private, and remember what worked next trip.">
   <meta name="apple-itunes-app" content="app-id=6757573416, app-argument=fishlog://logcatch">
   <link rel="canonical" href="https://coardmiller.github.io/fishlogger-link/">
-  <meta property="og:title" content="Try FishLogger Beta">
-  <meta property="og:description" content="Private voice catch logging for anglers who hate typing on the water.">
+  <meta property="og:title" content="FishLogger: Fishing Journal">
+  <meta property="og:description" content="Download the private voice fishing journal and use code FISHLOGGER for 1 free month of Pro.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://coardmiller.github.io/fishlogger-link/">
   <meta property="og:image" content="https://coardmiller.github.io/fishlogger-link/fishlogger-share-card.png">
   <meta property="og:image:width" content="2160">
   <meta property="og:image:height" content="2700">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Try FishLogger Beta">
-  <meta name="twitter:description" content="Log catches by voice, keep spots private, and remember what worked next trip.">
+  <meta name="twitter:title" content="FishLogger: Fishing Journal">
+  <meta name="twitter:description" content="Download the private voice fishing journal and use code FISHLOGGER for 1 free month of Pro.">
   <meta name="twitter:image" content="https://coardmiller.github.io/fishlogger-link/fishlogger-share-card.png">
-  <title>Try FishLogger Beta</title>
+  <title>FishLogger: Fishing Journal</title>
   <style>
     :root {
       color-scheme: dark;
@@ -100,6 +100,7 @@
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
     }
 
+    .offer,
     .referral {
       display: grid;
       gap: 12px;
@@ -110,6 +111,7 @@
     }
 
     .template h2,
+    .offer h2,
     .referral h2 {
       margin: 0 0 2px;
       font-size: 22px;
@@ -213,7 +215,7 @@
   <main>
     <div class="mark">F</div>
     <section>
-      <h1>Try FishLogger beta.</h1>
+      <h1>Download FishLogger.</h1>
       <p>Log a catch by voice before the details disappear. FishLogger keeps your spots private and saves what worked for the next trip.</p>
     </section>
     <section class="template" aria-label="Catch log template">
@@ -227,29 +229,29 @@
       </ul>
     </section>
     <nav class="actions" aria-label="FishLogger links">
-      <a class="button primary" href="https://testflight.apple.com/join/8G7G63b6">Join the beta</a>
+      <a class="button primary" href="https://apps.apple.com/us/app/fishlogger-fishing-journal/id6757573416?eventid=6772020592&amp;ct=bridge_app_store_install">Download on the App Store</a>
     </nav>
-    <section class="referral" aria-label="Share FishLogger">
-      <h2>Already joined?</h2>
-      <p class="share-copy">Send this to one angler who actually logs what worked. We are trying to hit 50 beta installs by Tuesday.</p>
-      <button class="button subtle" id="share-button" type="button">Share with an angler</button>
+    <section class="offer" aria-label="FishLogger Pro offer">
+      <h2>Launch offer</h2>
+      <p class="share-copy">Use code FISHLOGGER for 1 free month of yearly Pro. Pro unlocks pattern insights, CSV export, and AI fishing coaching.</p>
+      <a class="button secondary" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6757573416&amp;code=FISHLOGGER">Redeem Pro offer</a>
     </section>
     <nav class="actions" aria-label="FishLogger fallback links">
-      <a class="button secondary" href="https://apps.apple.com/us/app/fishlogger-fishing-journal/id6757573416?eventid=6772020592&amp;ct=weekend_event_bridge">Open the App Store event</a>
-      <a class="button secondary" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6757573416&amp;code=FISHLOGGER">Use code FISHLOGGER</a>
+      <button class="button subtle" id="share-button" type="button">Share with an angler</button>
+      <a class="button secondary" href="https://testflight.apple.com/join/8G7G63b6">Beta fallback</a>
     </nav>
-    <p class="note">Beta access is open while the next App Store release is in review. The App Store event runs May 22-26. Code FISHLOGGER gives new yearly Pro customers one free month through May 31.</p>
+    <p class="note">The app is live on the App Store. Code FISHLOGGER gives new yearly Pro customers one free month through May 31. Beta remains available only as a fallback while the next release is in review.</p>
   </main>
   <script>
     const shareUrl = "https://coardmiller.github.io/fishlogger-link/?src=share";
-    const shareText = "I am helping FishLogger get to 50 beta installs. It is a private fishing journal for logging catches by voice without spot burning.";
+    const shareText = "Try FishLogger. It is a private fishing journal for logging catches by voice without spot burning. Code FISHLOGGER gives 1 free month of Pro.";
     const shareButton = document.getElementById("share-button");
 
     shareButton.addEventListener("click", async () => {
       if (navigator.share) {
         try {
           await navigator.share({
-            title: "Try FishLogger Beta",
+            title: "FishLogger: Fishing Journal",
             text: shareText,
             url: shareUrl,
           });
