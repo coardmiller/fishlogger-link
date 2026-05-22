@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d504b">
-  <meta name="description" content="FishLogger is a private fishing journal for logging catches by voice on the water.">
+  <meta name="description" content="FishLogger is a private fishing journal and catch log template for anglers who want to remember what worked without typing on the water.">
   <meta property="og:title" content="FishLogger: Fishing Journal">
-  <meta property="og:description" content="Say the catch once. Find the pattern later.">
+  <meta property="og:description" content="A private catch log template you can fill by voice.">
   <title>FishLogger: Fishing Journal</title>
   <style>
     :root {
@@ -36,7 +36,7 @@
 
     main {
       width: min(100%, 560px);
-      min-height: 100vh;
+      min-height: 100svh;
       margin: 0 auto;
       padding: 42px 22px 34px;
       display: flex;
@@ -78,6 +78,50 @@
       gap: 12px;
     }
 
+    .template {
+      display: grid;
+      gap: 10px;
+      margin: 2px 0 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
+    }
+
+    .template h2 {
+      margin: 0 0 2px;
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .template ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .template li {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      color: rgba(255, 248, 235, 0.86);
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .template li::before {
+      content: "";
+      flex: 0 0 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 18px rgba(233, 168, 74, 0.65);
+    }
+
     a.button {
       display: flex;
       min-height: 58px;
@@ -110,17 +154,37 @@
       line-height: 1.5;
       color: rgba(255, 248, 235, 0.66);
     }
+
+    @media (max-height: 720px) {
+      main {
+        justify-content: flex-start;
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
     <div class="mark">F</div>
     <section>
-      <h1>Say the catch once.</h1>
-      <p>FishLogger is a private fishing journal for people who hate typing notes on the water.</p>
+      <h1>Private catch log.</h1>
+      <p>FishLogger is a fishing journal for remembering what worked without typing on the water.</p>
+    </section>
+    <section class="template" aria-label="Catch log template">
+      <h2>Log five things</h2>
+      <ul>
+        <li>Species, size, and lure</li>
+        <li>Exact spot, kept private</li>
+        <li>Wind, light, and water temp</li>
+        <li>One note about why it worked</li>
+        <li>What to try first next time</li>
+      </ul>
     </section>
     <nav class="actions" aria-label="FishLogger links">
-      <a class="button primary" href="https://apps.apple.com/us/app/fishlogger-fishing-journal/id6757573416?ct=github_pages_bridge">Open on the App Store</a>
+      <a class="button primary" href="https://apps.apple.com/us/app/fishlogger-fishing-journal/id6757573416?ct=github_pages_bridge">Open FishLogger</a>
       <a class="button secondary" href="https://testflight.apple.com/join/8G7G63b6">Join the TestFlight beta</a>
       <a class="button secondary" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6757573416&amp;code=FISHLOGGER">Use code FISHLOGGER</a>
     </nav>
